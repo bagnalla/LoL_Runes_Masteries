@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 /// <summary>
 /// MasteryPageDto class
@@ -84,8 +82,6 @@ public class MasteryPageDto
 
     public int[] treeCounts;
 
-    public MasteryPageDto() { }
-
     public void SortMasteries()
     {
         if (talents == null)
@@ -109,37 +105,6 @@ public class MasteryPageDto
     {
             return treeCounts[0] + "/" + treeCounts[1] + "/" + treeCounts[2];
     }
-
-    /*public string AllTalents()
-    {
-            string str = "";
-
-            if (talents == null)
-            {
-                str += "empty" + "<br/>";
-                return str;
-            }
-
-            foreach (TalentDto talent in talents)
-            {
-                //treeCounts[masteryDictionary[talent.name]] += talent.rank;
-
-                if (masteryDictionary[talent.name] == 0)
-                    str += "<span style=\"color: darkred;\">";
-                else if (masteryDictionary[talent.name] == 1)
-                    str += "<span style=\"color: blue;\">";
-                else
-                    str += "<span style=\"color: green;\">";
-
-                str += talent + "</span><br/>";
-            }
-
-            // string spec = "<span style=\"font-weight: bold\">" + treeCounts[0] + "/" + treeCounts[1] + "/" + treeCounts[2] + "</span>";
-
-            //str = spec + "<br/>" + str;
-
-            return str;
-    }*/
 
     public string AllTalentsTable()
     {
@@ -167,35 +132,6 @@ public class MasteryPageDto
 
         return str;
     }
-
-    /*public override string ToString()
-    {
-        string spec = "";
-
-        string str = "<span style=\"font-weight: bold;\">" + name + "</span><br/>";
-
-        if (talents == null)
-        {
-            str += "empty" + "<br/>";
-            return str;
-        }
-
-        foreach (TalentDto talent in talents)
-        {
-            str += talent + "<br/>";
-
-            if (talent.name == "Havoc")
-                spec = "OFFENSE SPEC";
-            else if (talent.name == "Tenacious")
-                spec = "DEFENSE SPEC";
-            else if (talent.name == "Wanderer")
-                spec = "UTILITY SPEC";
-        }
-
-        str += spec + "<br/>";
-
-        return str;
-    }*/
 
     public class MasteryComparer : IComparer<TalentDto>
     {

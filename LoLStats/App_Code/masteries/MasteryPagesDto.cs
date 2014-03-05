@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 /// <summary>
 /// MasteryPagesDto class
@@ -26,16 +24,8 @@ public class MasteryPagesDto
 
     void doTreeCounts()
     {
-        //if (onlyCurrent)
-        //{
-        //    if (CurrentPage != null)
-        //        CurrentPage.DoTreeCounts();
-        //}
-        //else
-        //{
-            foreach (MasteryPageDto page in pages)
-                page.DoTreeCounts();
-        //}
+        foreach (MasteryPageDto page in pages)
+            page.DoTreeCounts();
     }
 
     void sortMasteries()
@@ -45,16 +35,4 @@ public class MasteryPagesDto
             page.SortMasteries();
         }
     }
-
-    /*public override string ToString()
-    {
-        string str = "";
-
-        foreach (MasteryPageDto page in pages)
-        {
-            str += page.ToString() + "<br/>";
-        }
-
-        return str;
-    }*/
 }

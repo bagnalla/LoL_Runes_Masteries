@@ -43,11 +43,6 @@
 </head>
 <body>
 
-    <!--<div id="leftImageContainer"></div>
-    <div style="position: relative; min-width: 286px">
-        <img src="dragonright.png" style="position: fixed; right: 0; top: 0" />
-    </div>-->
-
     <div id="container">
         <div id="header">
             <br />
@@ -91,14 +86,6 @@
                         <div id="resultsDiv">
                             <div id="playerInfoDiv">
                                 <asp:Label ID="playerInfoLabel" runat="server"></asp:Label>
-                                <!--
-                        <br />
-                        <asp:Label ID="moreStatsLabel" runat="server" Text="more stats: " Visible="False"></asp:Label>
-                        <asp:LinkButton ID="season3StatsButton" runat="server" OnClick="moreStatsButton_Click" Visible="False" OnClientClick="moreStatsClick()">season 3</asp:LinkButton>
-                        <asp:LinkButton ID="season4StatsButton" runat="server" Enabled="False" Visible="False">season 4</asp:LinkButton>
-                        <br />
-                        <asp:LinkButton ID="matchHistoryButton" runat="server" OnClick="matchHistoryButton_Click" Visible="False">match history</asp:LinkButton>
-                            -->
                             </div>
 
                             <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1" DisplayAfter="0" EnableViewState="False">
@@ -117,14 +104,12 @@
                     </ContentTemplate>
                     <Triggers>
                         <asp:AsyncPostBackTrigger ControlID="submitButton" EventName="Click" />
-                        <asp:AsyncPostBackTrigger ControlID="season3StatsButton" EventName="Click" />
                     </Triggers>
                 </asp:UpdatePanel>
 
                 <br />
                 <asp:HiddenField ID="idHiddenField" runat="server" Visible="False" />
                 <asp:Label ID="cacheLabel" Style="display: none" runat="server" EnableViewState="False"></asp:Label>
-                <asp:Button ID="hiddenButton" runat="server" Style="display: none;" OnClick="hiddenButton_Click" />
 
             </form>
         </div>

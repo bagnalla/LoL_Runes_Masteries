@@ -24,42 +24,6 @@ public class SummonerDataManager
         File.WriteAllText(summonerFilePath + @"/info.txt", str);
     }
 
-    public static void WriteSummonerRunesFile(SummonerDto summoner, RunePagesDtoManager runePagesManager, string region, HttpServerUtility server)
-    {
-        string summonerRunesPath = server.MapPath(@"~/App_Data/Summoner_Data/" + region + '/' + summoner.id + @"/runes.json");
-
-        FileStream fout = File.OpenWrite(summonerRunesPath);
-
-        JsonSerializer serializer = new JsonSerializer();
-        JsonTextWriter jsonTextWriter = new JsonTextWriter(new StreamWriter(fout));
-
-        serializer.Serialize(jsonTextWriter, runePagesManager.runePagesDto);
-
-        jsonTextWriter.Flush();
-        jsonTextWriter.Close();
-
-        fout.Close();
-    }
-
-    public static RunePagesDto ReadSummonerRunesFile(SummonerDto summoner, string region, HttpServerUtility server)
-    {
-        string summonerRunesPath = server.MapPath(@"~/App_Data/Summoner_Data/" + region + '/' + summoner.id + @"/runes.json");
-
-        FileStream fin = File.OpenRead(summonerRunesPath);
-
-        //FileStream fin = new FileStream(summonerRunesPath, FileMode.Open);
-
-        JsonSerializer serializer = new JsonSerializer();
-        JsonTextReader jsonTextReader = new JsonTextReader(new StreamReader(fin));
-        RunePagesDto runePages = (RunePagesDto)serializer.Deserialize(jsonTextReader, typeof(RunePagesDto));
-
-       // RunePagesDto runePages = (RunePagesDto)JsonFormatter.Deserialize(typeof(RunePagesDto), fin);
-
-        fin.Close();
-
-        return runePages;
-    }
-
     public static void WriteSummonerMasteriesFile(SummonerDto summoner, MasteryPagesDto masteryPages, string region, HttpServerUtility server)
     {
         string summonerMasteriesPath = server.MapPath(@"~/App_Data/Summoner_Data/" + region + '/' + summoner.id + @"/masteries.json");
@@ -83,13 +47,9 @@ public class SummonerDataManager
 
         FileStream fin = File.OpenRead(summonerMasteriesPath);
 
-        //FileStream fin = new FileStream(summonerRunesPath, FileMode.Open);
-
         JsonSerializer serializer = new JsonSerializer();
         JsonTextReader jsonTextReader = new JsonTextReader(new StreamReader(fin));
         MasteryPagesDto masterypages = (MasteryPagesDto)serializer.Deserialize(jsonTextReader, typeof(MasteryPagesDto));
-
-        // RunePagesDto runePages = (RunePagesDto)JsonFormatter.Deserialize(typeof(RunePagesDto), fin);
 
         fin.Close();
 
@@ -112,7 +72,6 @@ public class SummonerDataManager
 
     public static bool RunesFileExists(SummonerDto summoner, string region, HttpServerUtility server)
     {
-        //return (File.Exists(server.MapPath(@"~/App_Data/Summoner_Data/" + region + '/' + summoner.id + @"/runes.json")));
         return (File.Exists(server.MapPath(@"~/App_Data/Summoner_Data/" + region + '/' + summoner.id + @"/runetotals.dat")));
     }
 
