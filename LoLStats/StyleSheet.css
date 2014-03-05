@@ -1,0 +1,302 @@
+﻿body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(paperseamless.jpg);
+    /*background-repeat:no-repeat;*/
+    background-attachment:fixed;
+    /*background-position: center;*/
+    /*background-color: #D7D7D7;*/
+}
+
+#leftImageContainer
+{
+    background: url(dragonleft.png) no-repeat;
+    background-attachment:fixed;
+    position: fixed;
+    /*background-size:55px 500px;*/
+    height: 100%;
+    width:286px;
+    float: left;
+}
+
+.buttonStyle
+{
+    border: thin solid #0000FF;
+    background-color: #808080;
+    font-weight: bold;
+    font-size: large;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+}
+
+.resultsStyle
+{
+    text-align: center;
+}
+
+div#titleDiv
+{
+    margin: auto;
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+header
+{
+    background-image: url(LoLfantasylogo.png);
+    width: 408px;
+    height: 59px;
+    margin: auto;
+}
+
+    header a
+    {
+        width: 408px;
+        height: 59px;
+        display: block;
+    }
+
+/*#titleLink
+{
+    text-decoration: none;
+    color: black;
+}*/
+
+#userInput
+{
+    width: 294px;
+    padding: 0px 0px 0px 45px;
+    margin: auto;
+    height: 90px;
+}
+
+#userInputTable
+{
+    margin: auto;
+}
+
+#validatorDiv
+{
+    float: left;
+    height: 100px;
+    width: 416px;
+    text-align: right;
+}
+
+#playerInfoDiv
+{
+    /*width: 282px;*/
+    /*padding: 0px 0px 0px 45px;*/
+    
+    margin: auto;
+    /*height: 40px;*/
+    text-align: center;
+    background-color: darkgray;
+}
+
+#playerInfoBorder
+{
+    border: groove;
+    border-width: 5px;
+    border-color: grey;
+}
+
+.errorMessage
+{
+    color: red;
+    vertical-align: middle;
+    /*float: left;*/
+}
+
+#resultsDiv
+{
+    
+    text-align: center;
+}
+
+.PleaseWait
+{
+    height: 100px;
+    width: 100px;
+    background-image: url('/magnifyingglass.gif');
+    background-repeat: no-repeat;
+    line-height: 32px;
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+}
+
+/*td, th
+{
+    border: solid 1px black;
+    margin: 0px;
+}*/
+
+.ResultsTable
+{
+    height: 150px;
+    width: 600px;
+    background-color: silver;
+}
+
+.LeftColumn
+{
+    width: 40%;
+    font-size: 20px;
+}
+
+.RightColumn
+{
+    width: 60%;
+    font-size: large;
+}
+
+.border
+{
+    border: solid 1px black;
+}
+
+table
+{
+    border-collapse: collapse;
+}
+
+footer
+{
+    font-size: x-small;
+    text-align: center;
+    /*position: fixed;
+    bottom: 0;*/
+    width: auto;
+    margin-right: 10px;
+}
+
+.runeTotalsTable
+{
+    text-align: left;
+    margin: auto;
+    /*margin-left: 40px;
+    font-size: large;*/
+}
+
+.masteriesTable
+{
+    text-align: left;
+    margin: auto;
+    /*font-size: large;*/
+}
+
+.runeTotalsLeftColumn
+{
+    text-align: left;
+    width: 55px;
+    vertical-align: top;
+}
+
+.runeTotalsRightColumn
+{
+    padding-left: 4px;
+    width: 175px;
+}
+
+.CurrentTable
+{
+    background-color: silver;
+    border: groove;
+    border-width: 5px;
+    border-color: silver;
+    column-rule-style: solid;
+    column-rule-color: black;
+    column-rule-width: thin;
+}
+
+.CurrentTableLeftColumn
+{
+    width: 275px;
+    vertical-align: top;
+    border: solid 1px black;
+    margin-left: 40px;
+}
+
+.CurrentTableRightColumn
+{
+    width: 250px;
+    border: solid 1px black;
+    margin: 0px;
+}
+
+.ColumnHeader
+{
+    font-size: x-large;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.TableHeader
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.PageName
+{
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.RuneTotals
+{
+    font-size: large;
+}
+
+.MasteryTotals
+{
+    font-size: large;
+}
+
+#other
+{
+    display: none;
+}
+
+#showOthersButton:visited, #showOthersButton:active, #hideOthersButton:visited, #hideOthersButton:active
+{
+    color: blue;
+}
+
+#wideWrapper
+{
+    width: 750px;
+    margin: auto;
+    background-color: #D7D7D7;
+}
+
+
+/*sticky footer*/
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+#container {
+   min-height:100%;
+   position:relative;
+   width: 525px;
+   margin: auto;
+}
+#header {
+   padding:10px;
+}
+#body {
+   padding:10px;
+   padding-bottom:20px;   /* Height of the footer */
+}
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:20px;   /* Height of the footer */
+   padding-left: 5px;
+}
